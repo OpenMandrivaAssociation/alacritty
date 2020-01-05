@@ -1,6 +1,6 @@
 Name:           alacritty
 Version:        0.4.0
-Release:        %mkrel 1
+Release:        2
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
 License:        ASL 2.0
@@ -25,7 +25,7 @@ BuildRequires:  desktop-file-utils
 
 Requires(post): ncurses
 Requires(post): ncurses-extraterms
-Requires:       xclip
+Recommends:     xclip
 
 Recommends:     tmux
 
