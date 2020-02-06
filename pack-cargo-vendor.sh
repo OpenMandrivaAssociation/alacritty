@@ -1,14 +1,14 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-if [ ! $(which cargo-vendor) ]; then
+if [ ! $(which cargo) ]; then
 	echo
 	echo "cargo-vendor not found!"
 	echo "You need to install the cargo-vendor package before running this script."
 	exit
 fi
 
-VERSION=$(grep Version ../SPECS/alacritty.spec | cut -d: -f2 | sed -e 's|^[[:space:]]*||')
-NAME=$(grep Name ../SPECS/alacritty.spec | cut -d: -f2 | sed -e 's|^[[:space:]]*||')
+VERSION=$(grep Version alacritty.spec | cut -d: -f2 | sed -e 's|^[[:space:]]*||')
+NAME=$(grep Name alacritty.spec | cut -d: -f2 | sed -e 's|^[[:space:]]*||')
 
 if [ ! -f ${NAME}-${VERSION}.tar.gz ]; then
 	wget -q https://github.com/jwilm/alacritty/archive/v${VERSION}/${NAME}-${VERSION}.tar.gz

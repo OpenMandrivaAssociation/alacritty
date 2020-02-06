@@ -1,13 +1,11 @@
 Name:           alacritty
-Version:        0.4.0
-Release:        2
+Version:	0.4.1
+Release:	1
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
 License:        ASL 2.0
 URL:            https://github.com/jwilm/alacritty
 Source0:        https://github.com/jwilm/alacritty/archive/v%{version}/%{name}-%{version}.tar.gz
-Source1:        alacritty-cargo-vendor-%{version}.tar.xz
-Source2:        cargo.config
 Source4:	https://github.com/jwilm/alacritty/releases/download/v%{version}/Alacritty.svg
 
 # This is the script that creates the Source1 tar-ball needed to build without net access.
@@ -17,7 +15,6 @@ Source4:	https://github.com/jwilm/alacritty/releases/download/v%{version}/Alacri
 Source100:      pack-cargo-vendor.sh
 
 BuildRequires:  cargo
-BuildRequires:  cmake
 BuildRequires:  freetype-devel
 BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:  pkgconfig(xcb)
@@ -80,12 +77,9 @@ Requires:       %{name} >= %{version}-%{release}
 The documentation for %{name}.
 
 %prep
-%autosetup -a1 -p1
+%autosetup -p1
 
 %build
-%__mkdir .cargo
-cp %{S:2} .cargo/config
-
 cargo build --release --verbose
 cargo doc --verbose
 
