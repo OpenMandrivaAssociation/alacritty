@@ -1,5 +1,5 @@
 Name:           alacritty
-Version:	0.4.1
+Version:	0.4.2
 Release:	1
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
@@ -79,6 +79,8 @@ The documentation for %{name}.
 %prep
 %autosetup -p1
 
+mv extra/linux/Alacritty.desktop extra/linux/%{name}.desktop
+
 %build
 cargo build --release --verbose
 cargo doc --verbose
@@ -116,7 +118,7 @@ tic -e alacritty,alacritty-direct %{_docdir}/%{name}/%{name}.info > /dev/null 2>
 %license LICENSE-APACHE
 %doc README.md CONTRIBUTING.md
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/*.desktop
 %{_datadir}/pixmaps/Alacritty.svg
 %{_docdir}/%{name}/%{name}.info
 %{_iconsdir}/%{name}*svg
