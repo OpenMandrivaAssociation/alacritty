@@ -61,7 +61,7 @@ This is the shell completion for BASH.
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
 BuildArch:      noarch
-Requires:       fish
+Recommends:       fish
 Requires:       %{name} >= %{version}-%{release}
 
 %description fish-completion
