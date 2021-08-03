@@ -19,6 +19,8 @@ BuildRequires:  freetype-devel
 BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:  pkgconfig(xcb)
 BuildRequires:  desktop-file-utils
+BuildRequires:  pkgconfig(xkbcommon)
+BuildRequires:  pkgconfig(xkbcommon-x11)
 
 Requires(post): ncurses
 Requires(post): ncurses-extraterms
