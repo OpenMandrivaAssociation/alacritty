@@ -1,5 +1,5 @@
 Name:           alacritty
-Version:	0.8.0
+Version:	0.9.0
 Release:	1
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
@@ -19,6 +19,8 @@ BuildRequires:  freetype-devel
 BuildRequires:  pkgconfig(fontconfig)
 BuildRequires:  pkgconfig(xcb)
 BuildRequires:  desktop-file-utils
+BuildRequires:  pkgconfig(xkbcommon)
+BuildRequires:  pkgconfig(xkbcommon-x11)
 
 Requires(post): ncurses
 Requires(post): ncurses-extraterms
