@@ -79,7 +79,7 @@ Requires:       %{name} >= %{version}-%{release}
 The documentation for %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-{version}-rc1
+%autosetup -p1 -n %{name}-%{version}-rc1
 
 mv extra/linux/Alacritty.desktop extra/linux/%{name}.desktop
 
