@@ -5,7 +5,7 @@ Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
 License:        ASL 2.0
 URL:            https://github.com/jwilm/alacritty
-Source0:        https://github.com/jwilm/alacritty/archive/v%{version}/%{name}-%{version}-rc1.tar.gz
+Source0:        https://github.com/jwilm/alacritty/archive/v%{version}/%{name}-%{version}-rc2.tar.gz
 Source4:	https://github.com/jwilm/alacritty/releases/download/v%{version}/Alacritty.svg
 
 # This is the script that creates the Source1 tar-ball needed to build without net access.
@@ -79,7 +79,7 @@ Requires:       %{name} >= %{version}-%{release}
 The documentation for %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-%{version}-rc1
+%autosetup -p1 -n %{name}-%{version}-rc2
 
 mv extra/linux/Alacritty.desktop extra/linux/%{name}.desktop
 
