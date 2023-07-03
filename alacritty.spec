@@ -1,5 +1,5 @@
 Name:           alacritty
-Version:	0.12.1
+Version:	0.12.2
 Release:	1
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
