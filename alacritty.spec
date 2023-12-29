@@ -7,6 +7,7 @@ License:        ASL 2.0
 URL:            https://github.com/jwilm/alacritty
 Source0:        https://github.com/jwilm/alacritty/archive/v%{version}/%{name}-%{version}.tar.gz
 Source4:	https://github.com/jwilm/alacritty/releases/download/v%{version}/Alacritty.svg
+Source1:        vendor.tar.gz
 
 # This is the script that creates the Source1 tar-ball needed to build without net access.
 # Update the version here and then run the script.
@@ -80,6 +81,8 @@ The documentation for %{name}.
 
 %prep
 %autosetup -p1 -n %{name}-%{version}
+mkdir .cargo
+cp %{SOURCE1} .cargo/config
 
 mv extra/linux/Alacritty.desktop extra/linux/%{name}.desktop
 
