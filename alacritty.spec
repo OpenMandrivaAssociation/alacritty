@@ -81,7 +81,7 @@ Requires:       %{name} >= %{version}-%{release}
 The documentation for %{name}.
 
 %prep
-%autosetup -p1 -n %{name}-%{version}
+%autosetup -a1
 mkdir .cargo
 cp %{SOURCE2} .cargo/config
 
