@@ -111,7 +111,7 @@ desktop-file-install extra/linux/%{name}.desktop \
 cp extra/completions/_%{name} %{buildroot}%{_datadir}/zsh/site-functions/_%{name}
 cp extra/completions/%{name}.bash %{buildroot}%{_datadir}/bash-completion/completions/%{name}
 cp extra/completions/%{name}.fish %{buildroot}%{_datadir}/fish/completions/%{name}.fish
-%__install -Dm 0644 extra/%{name}.man %{buildroot}%{mandir}/man1/%{name}.1
+#__install -Dm 0644 extra/%{name}.man %{buildroot}%{mandir}/man1/%{name}.1
 %__install -Dm 0644 extra/%{name}.info %{buildroot}%{_docdir}/%{name}/%{name}.info
 
 rm -vf %{buildroot}%{_prefix}/.crates.toml
