@@ -1,11 +1,11 @@
 Name:           alacritty
-Version:	0.13.1
-Release:	1
+Version:	0.14.0
+Release:	0.rc1.0
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
 License:        ASL 2.0
 URL:            https://github.com/jwilm/alacritty
-Source0:        https://github.com/jwilm/alacritty/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/jwilm/alacritty/archive/v%{version}-rc1/%{name}-%{version}-rc1.tar.gz
 Source4:	https://github.com/jwilm/alacritty/releases/download/v%{version}/Alacritty.svg
 Source1:        vendor.tar.xz
 Source2:        cargo_config
@@ -81,7 +81,7 @@ Requires:       %{name} >= %{version}-%{release}
 The documentation for %{name}.
 
 %prep
-%autosetup -a1
+%autosetup -n %{name}-%{version}-rc1 -a1
 mkdir .cargo
 cp %{SOURCE2} .cargo/config
 
