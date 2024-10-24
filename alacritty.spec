@@ -1,6 +1,6 @@
 Name:           alacritty
 Version:	0.14.0
-Release:	0.rc2.0
+Release:	1
 Summary:        A cross-platform, GPU-accelerated terminal emulator
 Group:          Terminals
 License:        ASL 2.0
